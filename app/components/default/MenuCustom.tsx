@@ -2,11 +2,10 @@
 import * as React from 'react';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import IconButton from '@mui/material/IconButton'; // 🌟 استيراد الـ IconButton الأساسي للحل
+import IconButton from '@mui/material/IconButton'; 
 import Link from 'next/link';
 import MenuIcon from '@mui/icons-material/Menu';
 
-// تحديد نوع الـ Items بدقة لضمان استقرار الكود
 interface MenuItemType {
   link: string;
   title: string;
@@ -17,7 +16,7 @@ export default function MenuCustom({ items = [], className }: { items: MenuItemT
   const open = Boolean(anchorEl);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget); // الأن يعمل بسلام لأن الـ currentTarget سيكون الـ IconButton (HTMLElement)
+    setAnchorEl(event.currentTarget); 
   };
 
   const handleClose = () => {
@@ -32,7 +31,7 @@ export default function MenuCustom({ items = [], className }: { items: MenuItemT
         aria-haspopup="true"
         aria-expanded={open}
         onClick={handleClick}
-        color="inherit" className='bg-rose-400'
+        color="inherit" 
 
       >
         <MenuIcon />
