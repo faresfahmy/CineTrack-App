@@ -1,0 +1,378 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*Custom Colors*/
+
+.bgColorMain {
+  background-color: #03071e !important;
+}
+.bgColorSecondary {
+  background: #000000;
+background: linear-gradient(327deg, rgba(0, 0, 0, 1) 0%, rgba(18, 35, 135, 0.79) 100%, rgba(237, 221, 83, 1) 100%);
+}
+/* Extrnal start */
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperWidthSm.css-maj990-MuiPaper-root-MuiDialog-paper{
+  width: 100% !important;
+  height: 450px !important;
+  border: rgb(255, 104, 104) 1px solid !important;
+    border-radius: 12px !important;
+  -webkit-border-radius: 12px !important;
+  -moz-border-radius: 12px !important;
+  -ms-border-radius: 12px !important;
+  -o-border-radius: 12px !important;
+}
+.css-kw13he-MuiDialogContent-root{
+  padding: 0px !important;
+}
+.primary-button {
+  font-family: 'Ropa Sans', sans-serif;
+  /*font-family: 'Valorant', sans-serif;
+  */color: white;
+  cursor: pointer;
+  height: 69px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  border: 1px solid #0E1822;
+  padding: 0.8rem 2.1rem;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.primary-button:hover {
+  border: 1px solid #FF4655;
+  color: white;
+  background-position: 40%;
+}
+
+.primary-button:before {
+  content: "";
+  position: absolute;
+  background-color: #FF4655;
+  width: 100%;
+  height: 100%;
+  top: -100px;
+  left: -100px;
+  transition: all  0.15s ease-in-out;
+  -webkit-transition: all  0.15s ease-in-out;
+  -moz-transition: all  0.15s ease-in-out;
+  -ms-transition: all  0.15s ease-in-out;
+  -o-transition: all  0.15s ease-in-out;
+  z-index: -1;
+}
+
+.primary-button:hover:before {
+  top: 0;
+  left: 0;
+}
+
+
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  width: 390px;
+  margin: 0 0 0 40px;
+}
+
+.input {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 45px;
+  padding-left: 2.5rem;
+  box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
+  border: 0;
+  border-radius: 12px;
+  background-color: #0e1822;
+  outline: none;
+  color: #bdbecb;
+  transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: text;
+  z-index: 0;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.input::placeholder {
+  color: #bdbecb;
+}
+
+.input:hover {
+  box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px #000;
+}
+
+.input:active {
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+}
+
+.input:focus {
+  box-shadow: 0 0 0 2.5px #2f303d;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  fill: #bdbecb;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  z-index: 1;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded{
+  background-color: #0E1822 !important;
+  color: white !important;
+}
+/* Card Movie */
+.card {
+  width: 190px;
+  height: 254px;
+  background: #171717;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 3px 1px #00000088;
+  cursor: pointer;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius:7px;
+  -webkit-border-radius:7px;
+  -moz-border-radius:7px;
+  -ms-border-radius:7px;
+  -o-border-radius:7px;
+}
+
+.card .content {
+  background: #171717;
+  width: 100%;
+  position: relative;
+  height: 250px;
+  z-index: 1;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.content::before {
+  opacity: 0;
+  transition: opacity 300ms;
+  content: " ";
+  display: block;
+  background: white;
+  width: 5px;
+  height: 50px;
+  position: absolute;
+  filter: blur(50px);
+  overflow: hidden;
+  -webkit-transition: opacity 300ms;
+  -moz-transition: opacity 300ms;
+  -ms-transition: opacity 300ms;
+  -o-transition: opacity 300ms;
+  -webkit-filter: blur(50px);
+    border-radius: 7px;
+}
+
+.card:hover .content::before {
+  opacity: 1;
+}
+
+.card::before {
+  opacity: 0;
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 360px;
+  background: linear-gradient(#ff2288, #387ef0);
+  transition: opacity 300ms;
+  animation: rotation_9018 8000ms infinite linear;
+  animation-play-state: paused;
+  -webkit-transition: opacity 300ms;
+  -moz-transition: opacity 300ms;
+  -ms-transition: opacity 300ms;
+  -o-transition: opacity 300ms;
+  -webkit-animation: rotation_9018 8000ms infinite linear;
+}
+
+.card:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+.card::after {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index:200;
+  background: #ff585877;
+  left: -100%;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+}
+.card:hover::after {
+  left: 0;
+}
+@keyframes rotation_9018 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Card Movie End */
+/* Extrnall End */
+.shape {
+  fill: #0E1822;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.menu {
+  right: -100%;
+  /*text-whiteabsolutetext-4xlright-1top-4z-100*/color: white;
+  position: absolute;
+  font-size: 30px;
+  top: 20px;
+  transition:300ms ;
+  -webkit-transition:300ms ;
+  -moz-transition:300ms ;
+  -ms-transition:300ms ;
+  -o-transition:300ms ;
+}
+.genres-list, .scroll{
+  scrollbar-width: 5px; 
+  scrollbar-color:  #02264a #0E1822; 
+}
+.pagination{
+   background-color: red ;
+   display: flex;
+   padding: 20px;
+   justify-items: center;
+}
+@media (max-width:875px) {
+  .navbar-col {
+      position: absolute;
+      flex-direction: column;
+      width: 100%;
+      height: 70px;
+      top: -300%;
+      transition: 300ms;
+        z-index: 300;
+}
+.navbar-col-active{
+    transition: 300ms;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+    top: calc(400% - 10px);
+}
+  .btn,.btn-border{
+    width: 100%;
+    height: 70px;
+  }
+  .menu{
+    right: 4px;
+  }
+  .logo{
+    font-size: 20px !important;
+  }
+  .group{
+    margin: 0px;
+  } 
+  .hero-info{
+    align-items: center;
+    text-align: center;
+    top:  20%;
+    left: 20%;
+}
+}
+
+@media (max-width:751px){
+    .hero-info{
+    left: 20%;
+}
+}
+@media (max-width:704px){
+    .hero-info{
+    left: 5%;
+}
+}
+@media (max-width:502px){
+    .hero-info{
+    left: 2%;
+}
+}
+@media (max-width:470px){
+    .hero-info{
+    top:  20%;
+    left: 0%;
+}
+}
+@media (max-width:395px){
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperWidthSm.css-maj990-MuiPaper-root-MuiDialog-paper{
+
+    height: 250px !important;
+  }
+}
+@media (max-width:560px){
+   .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperWidthSm.css-maj990-MuiPaper-root-MuiDialog-paper{
+    height: 300px !important;
+  }
+}
+
