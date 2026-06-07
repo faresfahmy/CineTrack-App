@@ -39,7 +39,6 @@ export const useSearchQuery = ({query,page}:searchQuery)=>{
 }
 export const useGetWishlist = ()=>{
      const {wishlist}=useWishlsit();
-     console.log(wishlist)
      const {data, isLoading} = useQuery({
         queryFn:async()=> await getAllMovies(wishlist),
         queryKey:[`wishlist`,...(wishlist||[])],
