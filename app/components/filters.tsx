@@ -32,12 +32,10 @@ export default function Filters({ genres,type,title,isNowPlaying=false,isSearch=
   })
   const dateNow = new Date().toISOString().split('T')[0].toString().split('').slice(0, 7).join('')
   let totalPages = movies?.data?.total_pages;
-  console.log(movies)
   function handleChangePage(pageNew:number){
     setPage(pageNew)
     queryClient.invalidateQueries({queryKey:[`movies-${genresSelected}-${page}`],exact:false})
   }
-  console.log(page)
   return (
     <div>
       {!isSearch?
