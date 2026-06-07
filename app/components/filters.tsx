@@ -71,7 +71,6 @@ export default function Filters({ genres,type,title,isNowPlaying=false,isSearch=
             wishlist id={movie.id}
             isNew={type=="tv"?movie?.first_air_date:movie?.release_date} 
             type={type||movie.media_type}
-            id={movie.id}
             />
           ))
         :(

@@ -1,29 +1,43 @@
+"use client";
 import * as React from 'react';
-import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import IconButton from '@mui/material/IconButton'; // 🌟 استيراد الـ IconButton الأساسي للحل
 import Link from 'next/link';
-import { BiMenu } from 'react-icons/bi';
+import MenuIcon from '@mui/icons-material/Menu';
 
-export default function MenuCustom({items, className}:{items: any[], className?: string}) {
+// تحديد نوع الـ Items بدقة لضمان استقرار الكود
+interface MenuItemType {
+  link: string;
+  title: string;
+}
+
+export default function MenuCustom({ items = [], className }: { items: MenuItemType[], className?: string }) {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
+
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
+    setAnchorEl(event.currentTarget); // الأن يعمل بسلام لأن الـ currentTarget سيكون الـ IconButton (HTMLElement)
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
 
   return (
-    <div>
-        <BiMenu 
+    <div className='menu'>
+      <IconButton
         id="demo-positioned-button"
         aria-controls={open ? 'demo-positioned-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open}
         onClick={handleClick}
-        className='menu' />
+        color="inherit" className='bg-rose-400'
+
+      >
+        <MenuIcon />
+      </IconButton>
+
       <Menu
         id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"
@@ -31,7 +45,7 @@ export default function MenuCustom({items, className}:{items: any[], className?:
         open={open}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: 'top',
+          vertical: 'bottom',
           horizontal: 'left',
         }}
         transformOrigin={{
@@ -39,13 +53,19 @@ export default function MenuCustom({items, className}:{items: any[], className?:
           horizontal: 'left',
         }}
       >
-        {items.map((item, index) => (
-          <Link key={index} href={item.link}>
-            <MenuItem onClick={handleClose}>
+        {(items || []).map((item, index) => {
+          if (!item || !item.link) return null;
+          return (
+            <MenuItem
+              key={index}
+              onClick={handleClose}
+              component={Link}
+              href={item.link}
+            >
               {item.title}
             </MenuItem>
-          </Link>
-        ))}
+          );
+        })}
       </Menu>
     </div>
   );

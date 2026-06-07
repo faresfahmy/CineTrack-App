@@ -6,6 +6,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import type SwiperType from "swiper";
 import "swiper/css";
 
+interface SwiperItem {
+  card: ReactNode;
+}
 const SwiperCards = ({
   items,
   paginationImages,
@@ -13,7 +16,7 @@ const SwiperCards = ({
   slidesPerView,
   isHero
 }: {
-  items: any[];
+  items: SwiperItem[]|undefined;
   paginationImages?: boolean;
   className?: string;
   slidesPerView?: number;
@@ -72,32 +75,10 @@ const SwiperCards = ({
           }
         }:{}}
       >
-        {items.map(({ card }, i) => (
+        {items?.map(({ card }, i) => (
           <SwiperSlide className={isHero ? `relative after:absolute after:bg-black/70 after:w-full aftre:h-full after:inset-0 ` : 'flex justify-between relative'} key={i}>{card}</SwiperSlide>
         ))}
       </Swiper>
-      <div className=" flex items-center gap-4">
-        {paginationImages &&
-          items.map(({ src }, i) => (
-            <div
-              onClick={() => {
-                swiper?.slideTo(i);
-                swiper?.autoplay.stop();
-              }}
-              key={i}
-              className={`${swiper?.realIndex === i && " shadow-md  -translate-y-5 border-rose-500 border opacity-90"
-                } cursor-pointer hover:-translate-y-5 z-5  hover:shadow-md hover:opacity-90 duration-200 rounded-xl overflow-hidden max-w-lg w-full h-40 relative`}
-            >
-              {swiper?.realIndex === i && swiper.autoplay.running && (
-                <div
-                  style={{ width: `${progress}%` }}
-                  className=" duration-200 opacity-50 absolute  w-0 h-full inset-0 bg-gray-600 z-10"
-                ></div>
-              )}
-              {src && src !== "" ? <Image alt="Image-pagination" src={src} fill className="object-cover" /> : null}{" "}
-            </div>
-          ))}
-      </div>
     </div>
   );
 };

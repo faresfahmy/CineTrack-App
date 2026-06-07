@@ -327,7 +327,8 @@ background: linear-gradient(327deg, rgba(0, 0, 0, 1) 0%, rgba(18, 35, 135, 0.79)
     height: 70px;
   }
   .menu{
-    right: 4px;
+    right: 10px;
+    z-index: 500;
   }
   .logo{
     font-size: 20px !important;

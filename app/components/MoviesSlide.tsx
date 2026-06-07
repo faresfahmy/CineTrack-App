@@ -19,7 +19,6 @@ export default function MoviesSlide({ results, title, isMovies=true }: { results
                 <CardMovie
                   title={card.title||card.name}
                   src={card.poster_path}
-                  id={card.id}
                   wishlist
                   isNew={card?.release_date}
                   type={isMovies?"movie":'tv'}

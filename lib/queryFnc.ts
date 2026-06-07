@@ -6,7 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 
 interface moviesResTypes{
     query?:string|undefined,
-    type:string,
+    type?:string,
     page:number,
     filters?:{
         filterName:string,

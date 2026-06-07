@@ -21,11 +21,11 @@ export default function wishlistDetails() {
                                 key={movie?.data?.id}
                                 src={movie?.data?.poster_path}
                                 title={movie?.data?.title || movie?.name}
-                                wishlist id={movie.id}
+                                wishlist 
+                                id={movie.id}
                                 isNew={movie?.type == "tv" ? movie?.data?.first_air_date : movie?.data?.release_date
                                 }
                                 type={movie?.type}
-                                id={movie?.data?.id}
                             />
                         ))
                         : (

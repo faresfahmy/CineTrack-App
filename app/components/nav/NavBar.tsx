@@ -8,8 +8,8 @@ import MenuCustom from '../default/MenuCustom';
 export default function NavBar({ links }: { links: any[] }) {
   const pathName = usePathname()
   return (
-    <>
-      <MenuCustom items={links} />
+    <div className='flex items-center'>
+      
       <div className={`navbar navbar-col `}>
         {
           links.map((link, index) => (
@@ -18,9 +18,10 @@ export default function NavBar({ links }: { links: any[] }) {
             </Button>
           ))
         }
-
+       
       </div>
-    </>
+       <MenuCustom items={links} />
+    </div>
 
   )
 }
