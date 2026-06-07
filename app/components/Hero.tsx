@@ -94,7 +94,7 @@ export default function Hero({results}:{results:any[]}) {
     card:(
         <>
         <MotionItem initial={{opacity:0}} whileInView={{ opacity:1,transition:{duration:0.9} }}>
-        <Image src={`https://image.tmdb.org/t/p/original/dd31qJxOarrHyGZwYsCzOjobQzP.jpg`}  alt="Tom Clancy's Jack Ryan: Ghost War" fill className='object-cover'/>
+        <Image src={`https://image.tmdb.org/t/p/original/dd31qJxOarrHyGZwYsCzOjobQzP.jpg`}  alt={`Tom Clancy's Jack Ryan: Ghost War`} fill className='object-cover'/>
         </MotionItem>
         <CardInfo
         title={`Tom Clancy's Jack Ryan: Ghost War`}
