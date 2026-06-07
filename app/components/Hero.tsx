@@ -16,7 +16,7 @@ export default function Hero({results}:{results:any[]}) {
     card:(
         <>
         <MotionItem initial={{opacity:0}} whileInView={{ opacity:1,transition:{duration:0.9} }}>
-        <Image src={`https://image.tmdb.org/t/p/original/zMwhWailP1WY7sb6AoE6b8ugoy.jpg`} fill alt='s1' className='object-cover'/>
+        <Image src={`https://image.tmdb.org/t/p/original/zMwhWailP1WY7sb6AoE6b8ugoy.jpg`} fill alt='Swapped' className='object-cover'/>
         </MotionItem>
         <CardInfo
         title={`Swapped`}
@@ -29,7 +29,7 @@ export default function Hero({results}:{results:any[]}) {
     card:(
         <>
         <MotionItem initial={{opacity:0}} whileInView={{ opacity:1,transition:{duration:0.9} }}>
-        <Image src={`https://image.tmdb.org/t/p/original/7TJjD2X9GTEqyLVIJKLS85J2V47.jpg`} fill  alt='s1' className='object-cover'/>
+        <Image src={`https://image.tmdb.org/t/p/original/7TJjD2X9GTEqyLVIJKLS85J2V47.jpg`} fill  alt='Madness' className='object-cover'/>
         </MotionItem>
         <CardInfo
         title={`Madness`}
@@ -42,7 +42,7 @@ export default function Hero({results}:{results:any[]}) {
     card:(
         <>
         <MotionItem initial={{opacity:0}} whileInView={{ opacity:1,transition:{duration:0.9} }}>
-        <Image src={`https://image.tmdb.org/t/p/original/xugEpZk9YQ0DIz1aFvH5HGkqpZK.jpg`}  alt='s1' fill className='object-cover'/>
+        <Image src={`https://image.tmdb.org/t/p/original/xugEpZk9YQ0DIz1aFvH5HGkqpZK.jpg`}  alt='Lee Cronin's The Mummy' fill className='object-cover'/>
         </MotionItem>
         <CardInfo
         title={`Lee Cronin's The Mummy`}
@@ -55,7 +55,7 @@ export default function Hero({results}:{results:any[]}) {
     card:(
         <>
         <MotionItem initial={{opacity:0}} whileInView={{ opacity:1,transition:{duration:0.9} }}>
-        <Image src={'https://image.tmdb.org/t/p/original/4k99kV4R1bbbrsnjR205v91Xbin.jpg`}  alt='s1' fill className='object-cover'/>
+        <Image src={'https://image.tmdb.org/t/p/original/4k99kV4R1bbbrsnjR205v91Xbin.jpg`}  alt='`Obsession' fill className='object-cover'/>
         </MotionItem>
         <CardInfo
         title={`Obsession`}
@@ -68,7 +68,7 @@ export default function Hero({results}:{results:any[]}) {
     card:(
         <>
         <MotionItem initial={{opacity:0}} whileInView={{ opacity:1,transition:{duration:0.9} }}>
-        <Image src={`https://image.tmdb.org/t/p/original/bq28ajZaoMyzEIm6REelqyqtEDZ.jpg`} fill  alt='s1' className='object-cover'/>
+        <Image src={`https://image.tmdb.org/t/p/original/bq28ajZaoMyzEIm6REelqyqtEDZ.jpg`} fill  alt='The Boys' className='object-cover'/>
         </MotionItem>
         <CardInfo
         title={`The Boys`}
@@ -81,7 +81,7 @@ export default function Hero({results}:{results:any[]}) {
     card:(
         <>
         <MotionItem initial={{opacity:0}} whileInView={{ opacity:1,transition:{duration:0.9} }}>
-        <Image src={`https://image.tmdb.org/t/p/original/oTE4lNs4PSG5iIWjqaTdCIFJ4Bs.jpg`} fill  alt='s1' className='object-cover'/>
+        <Image src={`https://image.tmdb.org/t/p/original/oTE4lNs4PSG5iIWjqaTdCIFJ4Bs.jpg`} fill  alt="Apex" className='object-cover'/>
         </MotionItem>
         <CardInfo
         title={`Apex`}
@@ -94,7 +94,7 @@ export default function Hero({results}:{results:any[]}) {
     card:(
         <>
         <MotionItem initial={{opacity:0}} whileInView={{ opacity:1,transition:{duration:0.9} }}>
-        <Image src={`https://image.tmdb.org/t/p/original/dd31qJxOarrHyGZwYsCzOjobQzP.jpg`}  alt='s1' fill className='object-cover'/>
+        <Image src={`https://image.tmdb.org/t/p/original/dd31qJxOarrHyGZwYsCzOjobQzP.jpg`}  alt="Tom Clancy's Jack Ryan: Ghost War" fill className='object-cover'/>
         </MotionItem>
         <CardInfo
         title={`Tom Clancy's Jack Ryan: Ghost War`}
