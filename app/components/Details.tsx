@@ -30,7 +30,6 @@ export default function Details({ detailsRes }: { detailsRes: any }) {
             option: genres || []
         }
     })
-    console.log(movies)
     const handleClickOpen = () => {
         setOpen(true);
     };
