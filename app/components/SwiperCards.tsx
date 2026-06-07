@@ -45,7 +45,6 @@ const SwiperCards = ({
         spaceBetween={isHero&&30 || 5}
         slidesPerView={slidesPerView || 10}
         className={` w-full relative ${className || " h-96"} overflow-hidden px-2`}
-        onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => setSwiper(swiper)}
         breakpoints={!isHero ? {
            200:{
