@@ -7,7 +7,6 @@ interface Props {
 export default async function page({ params }: Props) {
   const { id } = await params;
   const detailsRes = await fetchCustom(`/tv/${id}`)
-  console.log(detailsRes.data);
   return (
    <Details detailsRes={detailsRes.data}/>
   )
