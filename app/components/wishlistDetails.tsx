@@ -18,9 +18,9 @@ export default function wishlistDetails() {
                                 className='w-full flex justify-center  '
                                 key={movie?.data?.id}
                                 src={movie?.data?.poster_path}
-                                title={movie?.data?.title || movie?.name}
+                                title={movie?.data?.title || movie?.data?.name}
                                 wishlist 
-                                id={movie.id}
+                                id={movie?.data?.id}
                                 isNew={movie?.type == "tv" ? movie?.data?.first_air_date : movie?.data?.release_date
                                 }
                                 type={movie?.type}
