@@ -4,7 +4,7 @@ import Image from 'next/image'
 import CardInfo from './CardInfo'
 import MotionItem from './default/MotionItem'
 
-export default function Hero({ results }: { results: any[] }) {
+export default function Hero() {
   return (
     <div className='h-[600px]'>
       <SwiperCards
