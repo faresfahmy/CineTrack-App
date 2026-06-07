@@ -20,7 +20,6 @@ const CardInfo = ({
 
 
 }) => {
-  console.log(desc);
   return (
     <MotionItem
       initial={{ opacity: 0, y: 20 }}
