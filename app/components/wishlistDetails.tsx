@@ -6,8 +6,6 @@ import Empty from './default/Empty';
 import Heading from './default/Heading';
 export default function wishlistDetails() {
     const { data: movies, isLoading } = useGetWishlist()
-    console.log(movies)
-
     return (
         <div className=''>
             <Heading title='My Wishlist' className='text-2xl font-bold text-gray-200 mt-10 mb-7 ml-5'  />
