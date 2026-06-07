@@ -21,7 +21,6 @@ export default function DetailsSeason({ results, id }: { results: any, id: numbe
     const handleClose = () => {
         setOpen(false);
     };
-    console.log(results.videos.results)
     return (
         <div>
             <div className='w-full relative pt-6'>
