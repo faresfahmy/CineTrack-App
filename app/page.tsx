@@ -10,7 +10,7 @@ export default async function Home() {
     let upcomingRes = await fetchCustom('/movie/upcoming');
   return (
     <div >
-      <Hero results={upcomingRes.data.results} />
+      <Hero />
       {trendingRes.data ?
         <MoviesSlide results={trendingRes.data.results} title="Trending Movies" /> :
         <Empty title="Not Found Movies" />
