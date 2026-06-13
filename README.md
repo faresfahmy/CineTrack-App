@@ -1,6 +1,6 @@
 # 🌪️ CineTrack
 
-A premium, luxury UI/UX web application built for exploring electronic games, movies, and TV shows. This project focuses on high-performance data fetching, seamless animations, and an optimized user experience using modern frontend technologies.
+A premium, luxury UI/UX web application built for exploring  movies, and TV shows. This project focuses on high-performance data fetching, seamless animations, and an optimized user experience using modern frontend technologies.
 
 ---
 
