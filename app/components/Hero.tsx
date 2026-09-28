@@ -21,7 +21,7 @@ export default function Hero() {
                 <CardInfo
                   title={`Swapped`}
                   desc={`A small woodland creature and a majestic bird, two natural sworn enemies of the Valley, magically trade places and set off on an adventure of a lifetime to switch back. Their journey soon uncovers a greater threat—one that could endanger not only their species, but the entire valley they call home.`}
-                  id={1007757}
+                  id={1007758}
                 />
               </>
             )
